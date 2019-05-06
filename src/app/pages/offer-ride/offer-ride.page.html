@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Offer Ride</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="onOfferRideForm" class="list-form">
+
+    <div class="inputs">
+
+      <ion-item>
+        <ion-label position="">To : </ion-label>
+        <ion-input formControlName="to"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onOfferRideForm.get('to').touched && onOfferRideForm.get('to').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+      <ion-item class="for-input">
+        <ion-label position="">For : </ion-label>
+        <ion-input formControlName="for"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onOfferRideForm.get('for').touched && onOfferRideForm.get('for').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+    </div>
+
+    <div padding-top>
+
+      <ion-item>
+        <ion-label>Date & Time : </ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" formControlName="date"></ion-datetime>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onOfferRideForm.get('date').touched && onOfferRideForm.get('date').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+      <ion-item class="seats-avaible">
+        <ion-label position="">Seats available : </ion-label>
+        <ion-input type="number" formControlName="seats"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onOfferRideForm.get('seats').touched && onOfferRideForm.get('seats').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+    </div>
+
+    <div text-center padding-top class="ride-price">
+
+      <ion-item>
+        <ion-label position="">Estimated ride value : </ion-label>
+        <ion-input formControlName="price"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onOfferRideForm.get('price').touched && onOfferRideForm.get('price').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+    </div>
+
+    <div class="buttons">
+      <ion-button expand="full" shape="round" class="offer-ride" (click)="goToOfferRideLicenseConfirm()">
+        <ion-text>
+          Offer Ride
+        </ion-text>
+      </ion-button>
+    </div>
+
+    <div text-center>
+      <ion-text padding-top color="danger">
+        {{errorMessage}}
+      </ion-text>
+    </div>
+
+  </form>
+</ion-content>

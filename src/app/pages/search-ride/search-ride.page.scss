@@ -1,0 +1,49 @@
+ion-toolbar{
+    --background: #722f37;
+    ion-title{
+        color: #f8dd57;
+        font-family: Arial;
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+ion-item{
+    --highlight-color-focused: none;
+    --border-color: #ffffff;
+}
+div.inputs{
+    padding: 35px 0 25px;
+    ion-item{
+        --background: #DCDCDC;
+        --border-radius: 13px;
+        font-size: 30px;
+    }
+    ion-item.for-input{
+        margin-top: 23px;
+    }
+}
+.date-time{
+    font-size: 25px;
+}
+.date-time-select{
+    padding-top: 5px;
+    a{
+        font-size: 23px;
+        text-decoration: none;
+    }
+}
+ion-radio-group{
+    ion-item{
+        height: 30px;
+        font-size: 18px;
+    }
+}
+.driver-preference{
+    font-size: 18px;
+}
+.date-drive{
+    padding: 5px 0px 10px;
+    border: 1px #DCDCDC solid;
+    border-left: none;
+    border-right: none;
+}

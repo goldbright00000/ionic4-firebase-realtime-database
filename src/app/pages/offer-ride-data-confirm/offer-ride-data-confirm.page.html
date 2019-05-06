@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Data Confirmation</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form [formGroup]="onConfirmationForm" class="list-form">
+
+      <div text-center class="input-wrapper">
+        <div padding-top class="input-title">
+          <ion-text>
+            Enter your mobile
+          </ion-text>
+        </div>
+    
+        <ion-item text-center class="animated fadeInUp">
+          <ion-input type="tel" placeholder="(00) 00000-0000" formControlName="phone"></ion-input>
+        </ion-item>
+        <p ion-text class="text08" *ngIf="onConfirmationForm.get('phone').touched && onConfirmationForm.get('phone').hasError('required')">
+          <ion-text color="danger">
+            This field is required
+          </ion-text>
+        </p>
+      </div>
+
+      <div text-center class="input-wrapper">
+        <div padding-top class="input-title">
+          <ion-text>
+            Confirmation code
+          </ion-text>
+        </div>
+    
+        <ion-item text-center class="animated fadeInUp">
+          <ion-input type="number" placeholder="Code" formControlName="code"></ion-input>
+        </ion-item>
+        <p ion-text class="text08" *ngIf="onConfirmationForm.get('code').touched && onConfirmationForm.get('code').hasError('required')">
+          <ion-text color="danger">
+            This field is required
+          </ion-text>
+        </p>
+      </div>
+
+      <div text-center class="input-wrapper">
+        <div padding-top class="input-title">
+          <ion-text>
+            Confirm your email
+          </ion-text>
+        </div>
+    
+        <ion-item text-center class="animated fadeInUp">
+          <ion-input type="email" placeholder="E-" formControlName="email"></ion-input>
+        </ion-item>
+        <p ion-text class="text08" *ngIf="onConfirmationForm.get('email').touched && onConfirmationForm.get('email').hasError('required')">
+          <ion-text color="danger">
+            This field is required
+          </ion-text>
+        </p>
+      </div>
+
+      <div class="continue">
+        <ion-button expand="full" shape="round" (click)="doContinue()">
+          <ion-text>
+            Continue
+          </ion-text>
+        </ion-button>
+      </div>
+      
+      <div text-center>
+        <ion-text padding-top color="danger">
+          {{errorMessage}}
+        </ion-text>
+      </div>
+      
+    </form>
+  </ion-content>
+  

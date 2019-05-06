@@ -1,0 +1,29 @@
+ion-toolbar{
+    --background: #722f37;
+    ion-title{
+        color: #f8dd57;
+        font-family: Arial;
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+.buttons{
+    padding: 20px;
+    ion-button{
+        height: 39px;
+        --border-radius: 13px;
+        ion-text{
+            font-family: Arial;
+            font-size: 30px;
+            font-weight: 400;
+            text-transform: none;
+        }
+    }
+    ion-button.offer-ride{
+        --background: #3c191d;
+        ion-text{
+            color: #f8dd57;
+        }
+    }
+}

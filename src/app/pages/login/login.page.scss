@@ -1,0 +1,62 @@
+.auth-content{
+    padding: 20px 0;
+    .logo-text{
+        padding-top: 32px;
+    }
+    .biga{
+        color: #722f37;
+        font-family: Arial;
+        font-size: 50px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    .carona{
+        color: #000000;
+        font-family: Arial;
+        font-size: 50px;
+        font-weight: 900;
+    }
+    .university{
+        color: #000000;
+        font-family: Arial;
+        font-size: 38px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    ion-button{
+        height: 39px;
+        --border-radius: 13px;
+        ion-text{
+            font-family: Arial;
+            font-size: 30px;
+            font-weight: 400;
+            text-transform: none;
+        }
+    }
+    ion-button.register{
+        margin-top: 66px;
+        --background: #3c191d;
+        ion-text{
+            color: #f8dd57;
+        }
+    }
+    ion-button.login{
+        margin-top: 28px;
+        --background: #f8dd57;
+        ion-text{
+            color: #3c191d;
+        }
+    }
+    ion-button.loginwithfb{
+        margin-top: 28px;
+        --background: #475a96;
+        ion-icon{
+            font-size: 26px;
+            padding-right: 8px;
+        }
+        ion-text{
+            color: #ffffff;
+            font-size: 26px;
+        }
+    }
+}

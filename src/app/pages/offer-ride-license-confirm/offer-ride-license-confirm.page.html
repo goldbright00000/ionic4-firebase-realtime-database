@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Document Confirmation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="onConfirmationForm" class="list-form">
+
+    <div text-center class="logo">
+      <img src="assets/icon/baseline-photo-24px.png" alt="">
+    </div>
+
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-input type="text" placeholder="Driver's license" formControlName="license"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="onConfirmationForm.get('license').touched && onConfirmationForm.get('license').hasError('required')">
+      <ion-text color="danger">
+        This field is required
+      </ion-text>
+    </p>
+
+    <div text-center padding-top class="input-title">
+      <ion-text>
+        Enter the name on your driver's license
+      </ion-text>
+    </div>
+
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        Name
+      </ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="onConfirmationForm.get('name').touched && onConfirmationForm.get('name').hasError('required')">
+      <ion-text color="danger">
+        This field is required
+      </ion-text>
+    </p>
+
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        Last Name
+      </ion-label>
+      <ion-input type="text" formControlName="lastname"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="onConfirmationForm.get('lastname').touched && onConfirmationForm.get('lastname').hasError('required')">
+      <ion-text color="danger">
+        This field is required
+      </ion-text>
+    </p>
+
+    <div text-center class="avatar-wrapper">
+      <ion-text>
+          Send a clear picture of your driver's license
+      </ion-text>
+      <div class="avatar">
+          <ion-icon name="md-camera"></ion-icon>
+          <ion-text>
+            Send Image
+          </ion-text>
+      </div>
+    </div>
+    
+    <div class="continue">
+      <ion-button expand="full" shape="round" (click)="doContinue()">
+        <ion-text>
+          Continue
+        </ion-text>
+      </ion-button>
+    </div>
+    
+    <div text-center>
+      <ion-text padding-top color="danger">
+        {{errorMessage}}
+      </ion-text>
+    </div>
+    
+  </form>
+</ion-content>

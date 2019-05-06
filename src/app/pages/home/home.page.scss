@@ -1,0 +1,32 @@
+.bg{
+    background-color: #722f37;
+    img{
+        width: 100%;
+    }
+    .buttons{
+        padding: 50px 20px;
+        ion-button{
+            height: 39px;
+            --border-radius: 13px;
+            ion-text{
+                font-family: Arial;
+                font-size: 30px;
+                font-weight: 400;
+                text-transform: none;
+            }
+        }
+        ion-button.offer-ride{
+            --background: #3c191d;
+            ion-text{
+                color: #f8dd57;
+            }
+        }
+        ion-button.search-ride{
+            margin-top: 30px;
+            --background: #f8dd57;
+            ion-text{
+                color: #3c191d;
+            }
+        }
+    }
+}

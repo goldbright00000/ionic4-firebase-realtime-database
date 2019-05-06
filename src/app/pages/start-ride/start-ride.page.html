@@ -1,0 +1,38 @@
+<ion-content padding>
+
+  <div>
+    <ion-list>
+      <ion-item>
+        {{ride.date}}
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          {{ride.date}}
+        </ion-label>
+        <div item-content>
+          {{ride.for}}
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          15:50
+        </ion-label>
+        <div item-content>
+          {{ride.to}}
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          {{ride.seats}} seats available
+        </ion-label>
+        <div item-content>
+          R$ {{ride.price}} per person
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

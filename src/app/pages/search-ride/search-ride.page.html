@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Search Ride</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="inputs">
+    <ion-item>
+      <ion-label position="">To : </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item class="for-input">
+      <ion-label position="">For : </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="date-drive">
+    <ion-grid>    
+      <ion-row text-center>
+  
+        <ion-col>
+          <ion-text class="date-time">
+            Date & Time
+          </ion-text>
+          <div class="date-time-select">
+            <a href="/calendar">Select</a>
+          </div>
+        </ion-col>
+  
+        <ion-col>
+          <ion-text class="driver-preference">
+            Driver Preference
+          </ion-text>
+          <ion-radio-group>
+            <ion-item>
+              <ion-label>Male</ion-label>
+              <ion-radio slot="start" value="male" checked></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Female</ion-label>
+              <ion-radio slot="start" value="female"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-col>
+  
+      </ion-row>
+    </ion-grid> 
+  </div>
+
+</ion-content>

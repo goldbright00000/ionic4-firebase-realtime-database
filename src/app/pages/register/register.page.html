@@ -1,0 +1,161 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastre-se</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- Register form -->
+    <form [formGroup]="onRegisterForm" class="list-form">
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          Gender
+        </ion-label>
+        <ion-select formControlName="gender">
+          <ion-select-option>Male</ion-select-option>
+          <ion-select-option>Female</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onRegisterForm.get('gender').touched && onRegisterForm.get('gender').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          Name
+        </ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onRegisterForm.get('name').touched && onRegisterForm.get('name').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          Last Name
+        </ion-label>
+        <ion-input type="text" formControlName="lastname"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onRegisterForm.get('lastname').touched && onRegisterForm.get('lastname').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          Year of Birthday
+        </ion-label>
+        <ion-select formControlName="bithyear">
+          <ion-select-option *ngFor="let year of years">{{year}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onRegisterForm.get('bithyear').touched && onRegisterForm.get('bithyear').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          E-mail
+        </ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onRegisterForm.get('email').touched && onRegisterForm.get('email').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          College
+        </ion-label>
+        <ion-input type="text" formControlName="college"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onRegisterForm.get('college').touched && onRegisterForm.get('college').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          Class
+        </ion-label>
+        <ion-input type="text" formControlName="class"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="onRegisterForm.get('class').touched && onRegisterForm.get('class').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          Password
+        </ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <p ion-text color="danger" class="text08" *ngIf="onRegisterForm.get('password').touched && onRegisterForm.get('password').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p>
+
+      <!-- <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          Confirm
+        </ion-label>
+        <ion-input type="password" formControlName="confirm"></ion-input>
+      </ion-item>
+      <p ion-text color="danger" class="text08" *ngIf="onRegisterForm.get('confirm').touched && onRegisterForm.get('confirm').hasError('required')">
+        <ion-text color="danger">
+          This field is required
+        </ion-text>
+      </p> -->
+
+      <div text-center class="avatar-wrapper">
+        <ion-text>
+            Send a clear picture to your profile
+        </ion-text>
+        <div class="avatar">
+            <ion-icon name="md-camera"></ion-icon>
+            <ion-text>
+              Send Image
+            </ion-text>
+        </div>
+      </div>
+      
+      <div class="register">
+        <ion-button expand="full" shape="round" (click)="doRegister()">
+          <ion-text>
+            Register
+          </ion-text>
+        </ion-button>
+      </div>
+      
+      <ion-text padding-top color="danger">
+        {{errorMessage}}
+      </ion-text>
+
+      <div text-center padding-top class="terms">
+          <ion-text>
+              By registering with email, Facebook or Google +, you accept our <a href="">Terms of Use</a> and <a href="">Privacy Policy.</a>
+          </ion-text>
+      </div>
+
+      <div text-center class="login-here">
+          <ion-text>
+              Already a member? <a href="javascript:;" (click)="goToLogin()">Login Here</a>
+          </ion-text>
+      </div>
+      
+    </form>
+</ion-content>

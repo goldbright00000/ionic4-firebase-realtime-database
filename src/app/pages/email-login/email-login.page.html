@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <form [formGroup]="onEmailLoginForm" class="list-form">
+
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        E-mail
+      </ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="onEmailLoginForm.get('email').touched && onEmailLoginForm.get('email').hasError('required')">
+      <ion-text color="danger">
+        This field is required
+      </ion-text>
+    </p>
+
+    <ion-item no-padding class="animated fadeInUp">
+      <ion-label position="floating">
+        Password
+      </ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <p ion-text color="danger" class="text08" *ngIf="onEmailLoginForm.get('password').touched && onEmailLoginForm.get('password').hasError('required')">
+      <ion-text color="danger">
+        This field is required
+      </ion-text>
+    </p>
+    
+    <div class="login">
+      <ion-button expand="full" shape="round" (click)="login()">
+        <ion-text>
+          Login
+        </ion-text>
+      </ion-button>
+    </div>
+    
+    <ion-text padding-top color="danger">
+      {{errorMessage}}
+    </ion-text>
+
+    <div text-center padding-top class="register-here">
+        <ion-text>
+            Not a member? <a href="javascript:;" (click)="goToRegister()">Register Here</a>
+        </ion-text>
+    </div>
+    
+  </form>
+</ion-content>
